@@ -7,17 +7,26 @@ public class Main {
         int dato=teclado.nextInt();
         int[] vector =new int[dato];
         System.out.println("\nVector inicial hasta :"+dato);
-        for (int i = 0; i < vector.length; i++) {
-            if (i%10==0) System.out.println();
-            System.out.print(i+1+"\t");
-        }
+        vectorInicial(vector);
         vector=generarPrimos(dato);
         System.out.println("\nVector de primos hasta:"+dato);
+        vectorPrimos(vector);
+    }
+
+    private static void vectorPrimos(int[] vector) {
         for (int i = 0; i < vector.length; i++) {
             if (i%10==0) System.out.println();
             System.out.print(vector[i]+"\t");
         }
     }
+
+    private static void vectorInicial(int[] vector) {
+        for (int i = 0; i < vector.length; i++) {
+            if (i%10==0) System.out.println();
+            System.out.print(i+1+"\t");
+        }
+    }
+
     // Generar números primos de 1 a max
     public static int[] generarPrimos (int max)
     {
