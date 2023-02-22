@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     /**
+     * @author Alex Lopez Navarro
      * En este metodo se inicializan y se ejecutan los datos para realizar la criba de Erastotenes
      * @param args
      */
@@ -21,7 +22,7 @@ public class Main {
      * El metodo lo que hace es calcular e imprimir los numeros del vector que se le pasa. Cuando llega a un numero multiplo de 10 imprime un salto de linia.
      * @param vector es un vector de datos que le pasamos al metodo
      */
-    private static void vectorPrimos(int[] vector) {
+    public static void vectorPrimos(int[] vector) {
         for (int i = 0; i < vector.length; i++) {
             if (i%10==0) System.out.println();
             System.out.print(vector[i]+"\t");
@@ -32,7 +33,7 @@ public class Main {
      * Imprime los numeros desde el 1 hasta el numero que se le pasa para la criba
      * @param vector es un vector de datos que le pasamos al metodo, definido en el main
      */
-    private static void vectorInicial(int[] vector) {
+    public static void vectorInicial(int[] vector) {
         for (int i = 0; i < vector.length; i++) {
             if (i%10==0) System.out.println();
             System.out.print(i+1+"\t");
@@ -75,7 +76,7 @@ public class Main {
      * @param dim es el tamaño del array que creamos en el main + 1
      * @param esPrimo es un vector de booleanos que nos indica si el numero que hay en esa posicion es primo o no es primo
      */
-    private static void criba(int dim, boolean[] esPrimo) {
+    public static void criba(int dim, boolean[] esPrimo) {
         int j;
         int i;
         for (i=2; i<Math.sqrt(dim)+1; i++) {
@@ -93,7 +94,7 @@ public class Main {
      * @param esPrimo es un vector de booleanos que nos indica si el numero que hay en esa posicion es primo o no es primo
      * @return devuelve un entero con la cantidad de numeros primos que hay en el vector
      */
-    private static int contarPrimos(int dim, boolean[] esPrimo) {
+    public static int contarPrimos(int dim, boolean[] esPrimo) {
         int i;
         int cuenta = 0;
         for (i=0; i< dim; i++) {
@@ -110,7 +111,7 @@ public class Main {
      * @param cuenta es la cantidad de numeros primos que hay
      * @return devuelve un vector con los numeros primos
      */
-    private static int[] rellenaVectorNumerosPrimos(int dim, boolean[] esPrimo, int cuenta) {
+    public static int[] rellenaVectorNumerosPrimos(int dim, boolean[] esPrimo, int cuenta) {
         int j;
         int i;
         int[] primos = new int[cuenta];
